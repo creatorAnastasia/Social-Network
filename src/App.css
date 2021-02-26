@@ -9,29 +9,13 @@
   grid-template-areas:
    "head head head"
   "nav cont cont";
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 80px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
-.header img{
-width: 20px;
+.app-wrapper-content{ 
+grid-area: cont;
+background-color: grey;
+color: black;
 }
-.nav{
-grid-area: nav;
-background-color: black;
-color: bisque;
-}
-.header{
-  grid-area: head;
-  background-color: black;
-  color: bisque;
-}
-.content{
-  grid-area: cont;
-  background-color: black;
-  color: bisque;
-}
-.imgcontent img {
-  max-width: 950px;
-  max-height: 300px;
-}
+
