@@ -5,11 +5,15 @@ import ProfileInfo from './ProfileInfo/ProfileInfo'
 // модуль он же css объект
 
 
-const Profile = () => {
+const Profile = (props) => {
   return (
   <>
     <ProfileInfo />
-    <MyPosts />
+      <MyPosts 
+      posts={props.profilePage.posts} 
+      addPost={props.addPost} 
+      newPostText={props.profilePage.newPostText}
+      updateNewPostText={props.updateNewPostText}/>
   </>
   )
 }
