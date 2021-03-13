@@ -1,20 +1,22 @@
 import React from 'react';
 import cl from './MyPosts.module.css';
 import Post from './Post/Post'
+import { addPostAction, ubdateNewPostAction} from '../../../redux/state'
 
 const MyPosts = (props) => {
-
-let newPostEl = React.createRef();
+ 
+  let newPostEl = React.createRef();
 
   let addPost = () => {
-     props.addPost()
-    //  props.updateNewPostText('');
+    props.dispatch(addPostAction())
   }
+
   let postsElement = props.posts.map (p => <Post message={p.message} like={p.like} />)
 
   let postChange=()=>{
-    let text = newPostEl.current.value
-    props.updateNewPostText(text);
+    let text = newPostEl.current.value;
+    let action = ubdateNewPostAction(text);
+    props.dispatch(action)
   }
 
   return (
