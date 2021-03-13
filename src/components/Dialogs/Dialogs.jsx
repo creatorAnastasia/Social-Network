@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './Dialogs.module.css';
 import { NavLink } from 'react-router-dom';
-import { newMessageBodyCreator, sendMessageCreator} from '../../redux/state'
+import { newMessageBodyCreator, sendMessageCreator} from '../../redux/dialogs-reducer'
 
 
 
