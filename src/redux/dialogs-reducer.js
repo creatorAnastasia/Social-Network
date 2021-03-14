@@ -1,7 +1,23 @@
 const NEW_MESSAGE_BODY = 'NEW-MESSAGE-BODY';
 const SEND_MESSAGE = 'SEND-MESSAGE'
 
-const dialogsReducer = (state,action) =>{
+const initialState = {
+    dialogs:[
+    { id: 1, name: 'Max'},
+    {id: 2,name:'Vova'},
+     {id:3, name:'Valera'},
+      {id:4,name:'Valeron'}
+  ],
+  messages:[
+    { id: 1, message: 'hi' },
+    { id: 2, message: 'privet' },
+    { id: 3, message: 'yo' },
+    { id: 4, message: 'hello' }
+  ],
+  newMessageBody:""
+};
+
+const dialogsReducer = (state = initialState, action) => {
   switch (action.type){
     case NEW_MESSAGE_BODY:
       state.newMessageBody = action.body;

@@ -3,9 +3,6 @@ import cl from './Dialogs.module.css';
 import { NavLink } from 'react-router-dom';
 import { newMessageBodyCreator, sendMessageCreator} from '../../redux/dialogs-reducer'
 
-
-
-
 const DialogsItem = ({ id, name }) => {
   
   let path = '/dialogs/' + id;
@@ -36,21 +33,16 @@ const Dialogs = (props) => {
   let sendMesClick = () =>{
     props.store.dispatch(sendMessageCreator())
   }
- 
-
   return (
   <div className={cl.dialogs}>
     <div className={cl.dialogsItems}>
       {dialogsElements}
     </div>
-
-
       <div className={cl.message}>
         {messagesElements}
       <div className={cl.newMessage}>
           <div><textarea value={newMessageBody} 
-                         
-                          onChange = {newMessageChange} ></textarea></div>
+                         onChange = {newMessageChange} ></textarea></div>
         <div>
           <button onClick = {sendMesClick}> Send </button>
         </div>
