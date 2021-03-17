@@ -1,38 +1,23 @@
 import React from 'react';
 import cl from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
-import { newMessageBodyCreator, sendMessageCreator} from '../../redux/dialogs-reducer'
-
-const DialogsItem = ({ id, name }) => {
-  
-  let path = '/dialogs/' + id;
-  return (
-  <div className={cl.dialog + ' ' + cl.activ}>
-    <NavLink to={path}>{name}</NavLink>
-  </div>)
-} 
-
-  const Message = (props)=>{
-return(
-  <div className={cl.sms}>
-    {props.message}
-  </div>)
-  }
-
-
+import { Message, DialogsItem } from './DialogsItem/DialogsItem'
 
 const Dialogs = (props) => {
-  let state = props.store.getState().dialogsPage;
+  let state = props.dialogsPage;
   let dialogsElements = state.dialogs.map(dial => <DialogsItem name={dial.name} id={dial.id} />)
   let messagesElements = state.messages.map(mes => <Message message={mes.message} />)
    let newMessageBody = state.newMessageBody;
+
+
   let newMessageChange = (e) =>{
     let body = e.target.value;
-    props.store.dispatch(newMessageBodyCreator(body))
+    props.newMessageBody(body)
   }
   let sendMesClick = () =>{
-    props.store.dispatch(sendMessageCreator())
+    props.sendMessage();
   }
+
+
   return (
   <div className={cl.dialogs}>
     <div className={cl.dialogsItems}>

@@ -17,9 +17,7 @@ text-decoration: none;
 .message{
 padding: 10px;
 }
-.message .sms {
-color: aliceblue;
-}
+
 .newMessage{
   border: 1px solid;
   margin-top: 10px;

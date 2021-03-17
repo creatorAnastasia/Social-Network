@@ -4,19 +4,22 @@ import Post from './Post/Post'
 import { addPostAction, ubdateNewPostAction} from '../../../redux/profile-reducer'
 
 const MyPosts = (props) => {
- 
-  let newPostEl = React.createRef();
-
-  let addPost = () => {
+ let addPost = () => {
     props.dispatch(addPostAction())
   }
 
-  let postsElement = props.posts.map (p => <Post message={p.message} like={p.like} />)
+  let postsElement = 
+  props.posts.map (p => <Post message={p.message} like={p.like} />)
 
+  let newPostEl = React.createRef();
+  let onAddPost = () => {
+    props.addPost();
+  }
   let postChange=()=>{
     let text = newPostEl.current.value;
-    let action = ubdateNewPostAction(text);
-    props.dispatch(action)
+    props.ubdateNewPostText(text)
+    // let action = ubdateNewPostAction(text);
+    // props.dispatch(action)
   }
 
   return (
@@ -26,7 +29,7 @@ const MyPosts = (props) => {
                  onChange={postChange}
                   value={props.newPostText}/>
       <div>
-        <button onClick={addPost}>addText</button>
+        <button onClick={onAddPost}> addText </button>
       </div>
        </div>
       {postsElement}
