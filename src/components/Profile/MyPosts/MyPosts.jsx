@@ -12,7 +12,7 @@ const MyPosts = (props) => {
   props.posts.map (p => <Post message={p.message} like={p.like} />)
 
   let newPostEl = React.createRef();
-  let onAddPost = () => {
+  let onaddPost = () => {
     props.addPost();
   }
   let postChange=()=>{
@@ -29,7 +29,7 @@ const MyPosts = (props) => {
                  onChange={postChange}
                   value={props.newPostText}/>
       <div>
-        <button onClick={onAddPost}> addText </button>
+        <button onClick={onaddPost}> addText </button>
       </div>
        </div>
       {postsElement}
