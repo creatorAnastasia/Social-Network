@@ -1,7 +1,12 @@
-.imgcontent img {
-  max-width: 950px;
-  max-height: 300px;
+.imgcontent img{
+  display: flex;
+  background-size: cover;
 }
 .discr{
   padding: 0px;
+}
+.avaImg{
+  /* background: ; */
+  max-height: 60px;
+  max-width: 60px;
 }

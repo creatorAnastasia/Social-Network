@@ -3,10 +3,13 @@ import cl from './select.module.css';
 
 const Select = (props)=>{
   return(
-    <select>
+    <label>
+      Your status
+    <select className={cl.selec}>
   <option value="online">ON</option>
   <option value="offline">OFF</option>
     </select>
+    </label>
   )
  
 }

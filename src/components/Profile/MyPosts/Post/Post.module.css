@@ -15,3 +15,9 @@ border: 1px solid;
 width: 800px;
 margin: 10px;
 }
+.like{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background: url(../../../../assets/images/like.png)0 0/30px 30px;
+}

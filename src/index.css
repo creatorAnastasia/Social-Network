@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button:active, button:focus {
+  outline: none}
+  textarea:active, textarea:focus{
+    outline: none
+  }
+  select:active, select:focus {
+    outline: none}

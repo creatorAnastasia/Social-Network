@@ -3,10 +3,9 @@ const UBDATE_NEW_POST_TEXT = 'UBDATE-NEW-POST-TEXT';
 
 const initialState = {
    posts:[
-    { id: 1, message: 'hi', like: 5 },
-    { id: 2, message: 'hi,Nastya, it\s my first post', like: 7 },
+    { id: 1, message: 'hi,Nastya, it\s my first post', like: 7 },
   ],
-   newPostText:'newww'
+   newPostText:''
   };
 
 

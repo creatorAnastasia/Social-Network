@@ -1,14 +1,10 @@
 import React from 'react';
 import cl from './MyPosts.module.css';
 import Post from './Post/Post'
-import { addPostAction, ubdateNewPostAction} from '../../../redux/profile-reducer'
+import { addPostAction} from '../../../redux/profile-reducer'
 import Button from '../../../common/components/Button/button';
 
 const MyPosts = (props) => {
- let addPost = () => {
-    props.dispatch(addPostAction())
-  }
-
   let postsElement = 
   props.posts.map (p => <Post message={p.message} like={p.like} />)
 
@@ -27,8 +23,9 @@ const MyPosts = (props) => {
   <div className={cl.myPosts}> MY POSTS
     <div className={cl.newPost}>
         <textarea ref={newPostEl}
-                 onChange={postChange}
-                  value={props.newPostText}/>
+          onChange={postChange}
+          value={props.newPostText}
+        />
       <div>
         <Button onClick={onaddPost} label="Add Post" /> 
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../common/components/Button/button';
 import cl from './Dialogs.module.css';
 import { Message, DialogsItem } from './DialogsItem/DialogsItem'
 
@@ -29,7 +30,7 @@ const Dialogs = (props) => {
           <div><textarea value={newMessageBody} 
                          onChange = {newMessageChange} ></textarea></div>
         <div>
-          <button onClick = {sendMesClick}> Send </button>
+          <Button onClick = {sendMesClick}label="Send" />
         </div>
         </div>
 </div>
