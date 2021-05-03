@@ -2,6 +2,7 @@ import React from 'react';
 import cl from './MyPosts.module.css';
 import Post from './Post/Post'
 import { addPostAction, ubdateNewPostAction} from '../../../redux/profile-reducer'
+import Button from '../../../common/components/Button/button';
 
 const MyPosts = (props) => {
  let addPost = () => {
@@ -29,7 +30,7 @@ const MyPosts = (props) => {
                  onChange={postChange}
                   value={props.newPostText}/>
       <div>
-        <button onClick={onaddPost}> addText </button>
+        <Button onClick={onaddPost} label="Add Post" /> 
       </div>
        </div>
       {postsElement}

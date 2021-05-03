@@ -1,6 +1,12 @@
 .nav {
   grid-area: nav;
-  background-color: black;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3643d8+77,cc86e8+100 */
+background: rgb(54,67,216); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(54,67,216,1) 77%, rgba(204,134,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(54,67,216,1) 77%,rgba(204,134,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(54,67,216,1) 77%,rgba(204,134,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3643d8', endColorstr='#cc86e8',GradientType=0 ); /* IE6-9 */
+
   color: bisque;
   padding: 20px;
 }
@@ -9,5 +15,16 @@
   text-decoration: none;
 }
 .item a.activeLinc{
-  color: gold;
+  color:#8cd6d6;
 }
+
+.itemUs{
+  margin-top: 150px;
+}
+.itemUs a {
+  color: white;
+  text-decoration: none;
+}
+.itemUs a.activeLinc{
+  color:#8cd6d6;
+  }

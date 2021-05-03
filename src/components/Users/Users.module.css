@@ -1,0 +1,11 @@
+.usPhoto{
+  height: 100px;
+  width: 100px;
+  border: 50%;
+}
+.selected{
+  font-weight: bold;
+}
+.mr {
+  margin-right: 15px;
+}

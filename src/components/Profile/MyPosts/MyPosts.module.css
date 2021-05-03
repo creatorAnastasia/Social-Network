@@ -1,7 +1,10 @@
 .myPosts{
 margin: 15px;
-color: purple;
 }
 .newPost{
 margin: 15px;
+}
+textarea{
+  border-radius: 10px;
+  padding-left: 4px;
 }

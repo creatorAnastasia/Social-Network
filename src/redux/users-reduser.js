@@ -1,15 +1,12 @@
+import axios from "axios";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET_USERS'
 
 const initialState = {
-  users: [
-    // {id:1, followed:true, fullName: 'Maxim', status:'i am a boss', location:{city: 'Sochi', country: 'Russia'} },
-    // {id:2, followed:false, fullName: 'Nastya', status:'i am a princess', location:{city: 'Sochi', country: 'Russia'} }
-  ]
+  users: []
 };
-
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type){
@@ -43,7 +40,7 @@ const usersReducer = (state = initialState, action) => {
     case SET_USERS:
       return {
         ...state,
-        users: [...state.users, ...action.users]
+        users: [...action.users]
       }
     
     default:
@@ -53,6 +50,12 @@ const usersReducer = (state = initialState, action) => {
 
 export const followAC = (userId) => ({ type: FOLLOW, userId })
 export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId })
+export const loadUsersAC = () => {
+  return (dispatch) => axios.get('https://social-network.samuraijs.com/api/1.0/users')
+    .then(response => {
+      dispatch(setUsersAC(response.data.items))
+    })
+  }
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
 export default usersReducer;
 
