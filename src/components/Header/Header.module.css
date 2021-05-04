@@ -3,7 +3,6 @@
   
 }
 
-
 .header {
   grid-area: head;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c90e72+0,8746bf+48,3643d8+100 */
@@ -13,4 +12,12 @@ background: -webkit-linear-gradient(top,  rgba(201,14,114,1) 0%,rgba(135,70,191,
 background: linear-gradient(to bottom,  rgba(201,14,114,1) 0%,rgba(135,70,191,1) 48%,rgba(54,67,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c90e72', endColorstr='#3643d8',GradientType=0 ); /* IE6-9 */
 
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+.signIn{
+ padding-right: 20px;
+ 
 }

@@ -7,13 +7,13 @@
   border-radius: 15px;
   transition: all linear 1s;
   -webkit-transition: all linear .50s;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 23px;
+  padding-right: 23px;
   letter-spacing:0.6px;
   color:white;
   font-weight: bold;
   box-shadow: 0 0 10px rgb(252, 252, 252);
-  
+  border: none;
 }
 .but:hover{
   color: rgb(54,67,216);

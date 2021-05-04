@@ -2,6 +2,7 @@ import React from 'react';
 import cl from './Post.module.css';
 import userPhoto from '../../../../assets/images/User.png' 
 
+
 const Post = (props) => {
   return (
     <div className={cl.item}>
@@ -12,6 +13,7 @@ const Post = (props) => {
       </div>
       <div className={cl.like}></div>
       <div>{props.like}</div>
+      
       </div>
     
   )

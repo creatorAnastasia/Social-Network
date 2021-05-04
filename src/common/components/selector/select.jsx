@@ -4,11 +4,14 @@ import cl from './select.module.css';
 const Select = (props)=>{
   return(
     <label>
-      Your status
+      <div className={cl.wrap}>
+      <div className={cl.text}>Your status</div>
     <select className={cl.selec}>
-  <option value="online">ON</option>
-  <option value="offline">OFF</option>
+  <option value="online">ONLINE</option>
+  <option value="offline">OFFLINE</option>
+  <option value="offline">отошел</option>
     </select>
+    </div>
     </label>
   )
  

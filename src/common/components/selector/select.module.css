@@ -4,4 +4,14 @@
   border-radius: 10px;
   background-color: rgb(54,67,216);
   color: white;
+  display: flex;
+  /* margin-left: -10px; */
+}
+.text{
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+}
+.wrap{
+  display: flex;
 }

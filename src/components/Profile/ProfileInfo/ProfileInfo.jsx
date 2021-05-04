@@ -9,10 +9,10 @@ const ProfileInfo = () => {
       <div className={cl.imgcontent}>
         {/* <img src='http://wp.widewallpapers.ru/2k/abstract-color-lines/1280x800/color-lines-abstract-wide-wallpaper-1280x800-001.jpg'></img> */}
       </div>
-      <div className={cl.discr}></div>
+      <div></div>
       <div><img alt="avatar" className={cl.avaImg} src={userPhoto} /></div>
       <Select />
-      <div>discription</div>
+      <div  className={cl.discr}>discription</div>
     </div>
   )
 }

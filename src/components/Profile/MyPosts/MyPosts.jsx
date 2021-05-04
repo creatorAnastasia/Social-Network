@@ -1,8 +1,10 @@
 import React from 'react';
 import cl from './MyPosts.module.css';
 import Post from './Post/Post'
-import { addPostAction} from '../../../redux/profile-reducer'
+// import { addPostAction} from '../../../redux/profile-reducer'
 import Button from '../../../common/components/Button/button';
+import Toggle from '../../../common/components/toggle/toggle';
+
 
 const MyPosts = (props) => {
   let postsElement = 
@@ -18,7 +20,9 @@ const MyPosts = (props) => {
     // let action = ubdateNewPostAction(text);
     // props.dispatch(action)
   }
-
+let toggle=()=>{
+  console.log("Toggled");
+}
   return (
   <div className={cl.myPosts}> MY POSTS
     <div className={cl.newPost}>
@@ -29,6 +33,10 @@ const MyPosts = (props) => {
       <div>
         <Button onClick={onaddPost} label="Add Post" /> 
       </div>
+      <div>
+      <Toggle onClick = {toggle} />
+      </div>
+     
        </div>
       {postsElement}
    </div>
