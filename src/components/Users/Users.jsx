@@ -11,13 +11,17 @@ let Users = (props) => {
   const [page,setPage]=useState(1);
     // По принципу componentDidMount и componentDidUpdate:
   useEffect(() => {
+    const getData = async () => {
     // Обновляем заголовок документа, используя API браузера
-    axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=10&page=${page}`)
-      .then(response => {
-        setUsers(response.data.items)
-        setTotalPages(Math.ceil(response.data.totalCount/10))
-      })
-      .catch(e => console.log(e))
+    try {
+      const response = await axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=10&page=${page}`)
+      setUsers(response.data.items)
+      setTotalPages(Math.ceil(response.data.totalCount/10))
+    } catch (error) {
+      console.log(error)
+    }
+    }
+    getData()
   }, [setUsers, page]);
 
   const plusNum = () => {

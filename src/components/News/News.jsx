@@ -4,7 +4,8 @@ import cl from './News.module.css'
 
 const News = (props) => {
   return (
-    <div>news</div>
+    <div>
+    in work</div>
   )
 }
 export default News;

@@ -10,3 +10,9 @@ textarea{
   width: 270px;
   height: 98px;
 }
+.toggle{
+  display: flex;
+  justify-content: right;
+  margin-left: 850px;
+  position: fixed;
+}

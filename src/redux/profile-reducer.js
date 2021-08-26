@@ -51,6 +51,7 @@ export default profileReducer;
    }
  };
  export const ubdateNewPostActionCreator = (newText) => {
+   
    return {
      type: UBDATE_NEW_POST_TEXT,
      newText

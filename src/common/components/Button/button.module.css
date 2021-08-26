@@ -12,11 +12,11 @@
   letter-spacing:0.6px;
   color:white;
   font-weight: bold;
-  box-shadow: 0 0 10px rgb(252, 252, 252);
+  box-shadow: 0 0 7px rgb(252, 252, 252);
   border: none;
 }
 .but:hover{
   color: rgb(54,67,216);
   background-color: white;
-  box-shadow: 0 0 10px rgba(152, 75, 196, 0.712);
+  box-shadow: 0 0 7px rgba(165, 119, 192, 0.712);
 }

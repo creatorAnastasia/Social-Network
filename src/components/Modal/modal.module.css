@@ -1,13 +1,43 @@
 .wrap{
-
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  opacity: 0;
+  pointer-events: none;
+}
+.wrap.active{
+  opacity: 1;
+  pointer-events: all;
 }
 .wind{
-
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  transition: 1s all;
+  transform: scale(0.5);
+}
+.wind.active{
+  transform: scale(1);
+}
+.modalForm{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
 }
 
-.modalHead{
-
+.but{
+  display: flex;
+ justify-content: space-between;
 }
-.modalFooter{
-  
+.input{
+margin: 5px;
 }

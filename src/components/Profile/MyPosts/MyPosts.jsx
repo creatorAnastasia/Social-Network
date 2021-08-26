@@ -33,10 +33,9 @@ let toggle=()=>{
       <div>
         <Button onClick={onaddPost} label="Add Post" /> 
       </div>
-      <div>
+      <div className={cl.toggle}>
       <Toggle onClick = {toggle} />
       </div>
-     
        </div>
       {postsElement}
    </div>

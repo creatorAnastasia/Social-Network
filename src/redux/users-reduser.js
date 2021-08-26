@@ -51,11 +51,16 @@ const usersReducer = (state = initialState, action) => {
 export const followAC = (userId) => ({ type: FOLLOW, userId })
 export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId })
 export const loadUsersAC = () => {
-  return (dispatch) => axios.get('https://social-network.samuraijs.com/api/1.0/users')
-    .then(response => {
-      dispatch(setUsersAC(response.data.items))
-    })
+  return async (dispatch) => {
+    try {
+      const response = await axios.get('https://social-network.samuraijs.com/api/1.0/users')
+      
+      dispatch(setUsersAC(response.data.items)) 
+    } catch (error) {
+      console.log(error)
+    }
   }
+}
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
 export default usersReducer;
 
